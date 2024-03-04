@@ -6,6 +6,9 @@ from datetime import datetime
 st.set_page_config(page_title="Quiz",page_icon="https://static.vecteezy.com/system/resources/previews/017/349/652/non_2x/check-mark-and-cross-symbols-free-png.png")
 st.title("Quiz")
 st.markdown("""<style>
+            .viewerBadge_link__qRIco {
+                display: none;
+            }
             a svg{
                 display:none;
             }
