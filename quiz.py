@@ -73,7 +73,7 @@ q21=st.radio("Q21 : What is the size of the 'double' data type in Java? ",["4 by
 q22=st.radio("Q22 : What is the range of the 'short' data type in Java? ",["-128 to 127","0 to 255","-32768 to 32767","-214783648 to 214783647"],index=None,key="q22")
 q23=st.radio("Q23 : What is the default value of the 'byte' data type in Java? ",["0","1","null","false"],index=None,key="q23")
 ab=0
-if('s' in st.session.state and ab != st.session.state.s):
+if(hasattr(st.session.state, 's') and ab != st.session.state.s):
      st.markdown("""<style>
             button.st-emotion-cache-7ym5gk.ef3psqc12 {
             display: none;
