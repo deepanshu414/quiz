@@ -37,8 +37,8 @@ st.markdown("""<style>
             }
             </style>""",True)
 l=[]
-# if "s" not in st.session.state:
-#             st.session.state.s=0
+if("s" not in st.session_state):
+    st.session_state.s=0
 l.append(datetime.now())
 main=st.text_input("Enter Name*",placeholder="Enter your full name")
 q1=st.radio("Q1 : What is the result of 5 * 3 + 2 / 9 ?",["1","2","15","16"],index=None,key="q1")
@@ -72,13 +72,13 @@ q20=st.radio("Q20 : Which data type in Java is used to store a single Unicode Ch
 q21=st.radio("Q21 : What is the size of the 'double' data type in Java? ",["4 bytes","2 bytes","8 bytes","1 bytes"],index=None,key="q21")
 q22=st.radio("Q22 : What is the range of the 'short' data type in Java? ",["-128 to 127","0 to 255","-32768 to 32767","-214783648 to 214783647"],index=None,key="q22")
 q23=st.radio("Q23 : What is the default value of the 'byte' data type in Java? ",["0","1","null","false"],index=None,key="q23")
-# ab=st.session.state.s
-# if(ab!=st.session.state.s):
-#      st.markdown("""<style>
-#             button.st-emotion-cache-7ym5gk.ef3psqc12 {
-#             display: none;
-#             }
-#             </style>""",True) 
+ab=st.session.state.s
+if(ab!=st.session.state.s):
+     st.markdown("""<style>
+            button.st-emotion-cache-7ym5gk.ef3psqc12 {
+            display: none;
+            }
+            </style>""",True) 
 if(st.button("Submit")):
     if(q1==None or q2==None or q3==None or q4==None or q5==None or q6==None or q7==None or q8==None or q9==None or q10==None or q11==None or q12==None or q13==None or q14==None or q15==None or q16==None or q17==None or q18==None or q19==None or q20==None or q21==None or q22==None or q23==None):
         st.warning("Attempt All Questions")
@@ -90,7 +90,7 @@ if(st.button("Submit")):
             display: none;
             }
             </style>""",True)
-        # st.session.state.s+=1
+        st.session.state.s+=1
         l.append(datetime.now())
         marks={q1:"15",q2:"3",q3:"32",q4:"24",q5:"5",q6:"class",q7:"String",q8:"x is greater",q9:"static",q10:"A package can be defined within another package",q11:"Hello",q12:"int [][] arr = new int[3][3]",q13:"0 to 255",q14:"1variable",q15:"Depends on the data type",q16:"true",q17:"4 bytes",q18:"float",q19:"false",q20:"char",q21:"8 bytes",q22:"-32768 to 32767",q23:"0"}
         count=0
