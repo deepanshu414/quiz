@@ -37,7 +37,7 @@ st.markdown("""<style>
             }
             </style>""",True)
 l=[]
-if "s" in st.session.state:
+if "s" not in st.session.state:
             st.session.state.s=0
 l.append(datetime.now())
 main=st.text_input("Enter Name*",placeholder="Enter your full name")
