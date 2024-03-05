@@ -37,7 +37,8 @@ st.markdown("""<style>
             }
             </style>""",True)
 l=[]
-st.session.state.s=0
+if not hasattr(st.session.state, 's'):
+    st.session.state.s = 0
 l.append(datetime.now())
 main=st.text_input("Enter Name*",placeholder="Enter your full name")
 q1=st.radio("Q1 : What is the result of 5 * 3 + 2 / 9 ?",["1","2","15","16"],index=None,key="q1")
@@ -71,7 +72,8 @@ q20=st.radio("Q20 : Which data type in Java is used to store a single Unicode Ch
 q21=st.radio("Q21 : What is the size of the 'double' data type in Java? ",["4 bytes","2 bytes","8 bytes","1 bytes"],index=None,key="q21")
 q22=st.radio("Q22 : What is the range of the 'short' data type in Java? ",["-128 to 127","0 to 255","-32768 to 32767","-214783648 to 214783647"],index=None,key="q22")
 q23=st.radio("Q23 : What is the default value of the 'byte' data type in Java? ",["0","1","null","false"],index=None,key="q23")
-st.session.state.k=0
+if not hasattr(st.session.state, 'k'):
+    st.session.state.k = 0
 if(st.session.state.s!=st.session.state.k):
             st.markdown("""<style>
                         button.st-emotion-cache-7ym5gk.ef3psqc12 {
