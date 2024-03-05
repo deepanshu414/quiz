@@ -73,12 +73,12 @@ q22=st.radio("Q22 : What is the range of the 'short' data type in Java? ",["-128
 q23=st.radio("Q23 : What is the default value of the 'byte' data type in Java? ",["0","1","null","false"],index=None,key="q23")
 st.session.state.k=0
 if(st.session.state.s!=st.session.state.k):
-     st.markdown("""<style>
-            button.st-emotion-cache-7ym5gk.ef3psqc12 {
-            display: none;
-            }
-            </style>""",True) 
-      st.session.state.s=st.session.state.k
+            st.markdown("""<style>
+                        button.st-emotion-cache-7ym5gk.ef3psqc12 {
+                        display: none;
+                        }
+                        </style>""",True) 
+            st.session.state.s=st.session.state.k
 elif(st.button("Submit")):
     if(q1==None or q2==None or q3==None or q4==None or q5==None or q6==None or q7==None or q8==None or q9==None or q10==None or q11==None or q12==None or q13==None or q14==None or q15==None or q16==None or q17==None or q18==None or q19==None or q20==None or q21==None or q22==None or q23==None):
         st.warning("Attempt All Questions")
