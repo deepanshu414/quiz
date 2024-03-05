@@ -40,6 +40,11 @@ l=[]
 # if not hasattr(st.session.state, 's'):
 #     st.session.state.s = 0
 l.append(datetime.now())
+# Example usage with a non-empty label
+st.sidebar.slider("Slider label", min_value=0, max_value=10)
+
+# If you want to hide the label but still provide accessibility, you can use label_visibility="collapsed"
+st.sidebar.slider("", min_value=0, max_value=10, label_visibility="collapsed")
 main=st.text_input("Enter Name*",placeholder="Enter your full name")
 q1=st.radio("Q1 : What is the result of 5 * 3 + 2 / 9 ?",["1","2","15","16"],index=None,key="q1")
 q2=st.radio("Q2 : What will be the result of 15%4",["3","1","5","12"],index=None,key="q2")
