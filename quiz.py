@@ -142,7 +142,7 @@ if(st.button("Submit")):
                 if(count==l_value[x] and main==l_key[x]):
                     break
             st.write("Your rank : " + str(c))
-            row_data = [str(main), str(count),'23',str(l[0]),str(l[1]),str(l[1]-l[0]),c,wrong_answer,right_answer]  
+            row_data = [str(main), str(count),'23',str(l[0]),str(l[1]),str(l[1]-l[0]),c,str(wrong_answer),str(right_answer)]  
             print(row_data)
             worksheet.append_row(row_data, value_input_option='RAW', insert_data_option='INSERT_ROWS', table_range=f"A{last_row_index}")
             st.write("Your Score is : " + str(count) + "/ 23") 
