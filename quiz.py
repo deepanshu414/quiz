@@ -102,12 +102,12 @@ if(st.button("Submit")):
         wrong_answer={}
         right_answer={}
         for key,value in marks.items():
+            find_index+=1
             if(key==value):
                 count+=1
             else:
                 wrong_answer[find_index]=key
                 right_answer[find_index]=value
-            find_index+=1
         try:
             scope=['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
             cre=ServiceAccountCredentials.from_json_keyfile_name('userdatastore-413415-90c757e71960.json',scope)
