@@ -98,9 +98,16 @@ if(st.button("Submit")):
         l.append(datetime.now())
         marks={q1:"15",q2:"3",q3:"32",q4:"24",q5:"5",q6:"class",q7:"String",q8:"x is greater",q9:"static",q10:"A package can be defined within another package",q11:"Hello",q12:"int [][] arr = new int[3][3]",q13:"0 to 255",q14:"1variable",q15:"Depends on the data type",q16:"true",q17:"4 bytes",q18:"float",q19:"false",q20:"char",q21:"8 bytes",q22:"-32768 to 32767",q23:"0"}
         count=0
+        find_index=0
+        wrong_answer={}
+        right_answer={}
         for key,value in marks.items():
             if(key==value):
                 count+=1
+            else:
+                wrong_answer[find_index]=key
+                right_answer[find_index]=value
+            find_index+=1
         try:
             scope=['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
             cre=ServiceAccountCredentials.from_json_keyfile_name('userdatastore-413415-90c757e71960.json',scope)
@@ -135,7 +142,7 @@ if(st.button("Submit")):
                 if(count==l_value[x] and main==l_key[x]):
                     break
             st.write("Your rank : " + str(c))
-            row_data = [str(main), str(count),'23',str(l[0]),str(l[1]),str(l[1]-l[0]),c]  
+            row_data = [str(main), str(count),'23',str(l[0]),str(l[1]),str(l[1]-l[0]),c,wrong_answer,right_answer]  
             print(row_data)
             worksheet.append_row(row_data, value_input_option='RAW', insert_data_option='INSERT_ROWS', table_range=f"A{last_row_index}")
             st.write("Your Score is : " + str(count) + "/ 23") 
