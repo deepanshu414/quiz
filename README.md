@@ -1,5 +1,3 @@
-<div style="color:red">Hey</div>
-
 <style>
   #my-id{
     color:red;
