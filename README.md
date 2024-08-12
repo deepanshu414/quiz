@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 To run the Java Quiz App, use the following command:
 ```sh
-streamlit run app.py
+streamlit run quiz.py
 ```
 ## 📊 Data Storage
 
