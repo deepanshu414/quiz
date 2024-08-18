@@ -65,7 +65,7 @@ Contributions to the Java Quiz App are welcome! Here's how you can contribute:
 
 ## 📄 License
 
-This project is licensed under the GPL License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
