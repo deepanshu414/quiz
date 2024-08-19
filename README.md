@@ -6,6 +6,17 @@
 
 A simple yet powerful Java multiple-choice quiz application built with Python and Streamlit. Test your Java knowledge, see your ranking, and visualize scores!
 
+## Table of Contents
+- [Features](#-features)
+- [Technologies used](#%EF%B8%8F-technologies-used)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Running app](#%EF%B8%8F-running-the-app)
+- [Data Storage](#-data-storage)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
+
 ## 🚀 Features
 
 - **Interactive Java Quiz**: Test your knowledge with multiple-choice questions
